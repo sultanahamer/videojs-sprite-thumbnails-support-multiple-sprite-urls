@@ -51,7 +51,7 @@ const spriteThumbs = (player, plugin, options) => {
     if (!(sprite && sprite.complete)) {
       return;
     }
-    framesInEachUrl = Math.ceil(imgWidth / width) * Math.ceil(imgHeight / height);
+    framesInEachUrl = Math.round(imgWidth / width * (imgHeight / height));
     secondsForEachUrl = framesInEachUrl * options.interval;
   };
   const getUrl = position => {
